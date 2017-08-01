@@ -18,8 +18,14 @@ Array.prototype.myMap = function(callback) {
 
 // https://github.com/bgando/functionalJS/blob/master/callbacks/callbackExercises.md exercises
 
-// 1
+// funcCaller
 
 function funcCaller(callback, arg) {
   return callback(arg)
+}
+
+// firstVal
+
+function firstVal(arr, callback) {
+  callback(arr[0], 0, arr)
 }
