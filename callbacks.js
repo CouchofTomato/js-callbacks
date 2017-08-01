@@ -5,3 +5,13 @@ Array.prototype.myEach = function(callback) {
     callback.call(this, this[i])
   }
 };
+
+// myMap function
+
+Array.prototype.myMap = function(callback) {
+  let a = []
+  this.myEach(function(i) {
+    a.push(callback(i))
+  })
+  return a
+};
