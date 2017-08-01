@@ -15,3 +15,11 @@ Array.prototype.myMap = function(callback) {
   })
   return a
 };
+
+// https://github.com/bgando/functionalJS/blob/master/callbacks/callbackExercises.md exercises
+
+// 1
+
+function funcCaller(callback, arg) {
+  return callback(arg)
+}
