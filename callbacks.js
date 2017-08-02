@@ -44,3 +44,17 @@ function firstVal(collection, callback) {
     callback(objKeys[0], 0, collection);
   }
 }
+
+// method that can only be called once
+
+let once = (callback) =>{
+  let called = false
+  return function() {
+    if (called) {
+      console.log('already called')
+    } else {
+      called = true
+      callback.call(callback, ...arguments)
+    }
+  }
+}
